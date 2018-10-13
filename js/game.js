@@ -39,6 +39,8 @@ Game.getCoordinates = function(layer,pointer){
 
 Game.addNewPlayer = function(id,x,y){
     Game.playerMap[id] = game.add.sprite(x,y,'chick',1);
+    var text = game.add.text(0, 0, name, {font: "16px Arial", fill: "#ffffff"});
+    Game.playerMap[id].addChild(text);
     left = Game.playerMap[id].animations.add('left',[10,11,12],15,true);
     right = Game.playerMap[id].animations.add('right',[0,1,2],15,true);
 

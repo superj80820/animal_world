@@ -3,7 +3,7 @@
  */
 
 var Client = {};
-Client.socket = io.connect();
+Client.socket = io.connect("https://messfar.com", {path: "/folder/socket.io",secure: true});
 
 Client.sendTest = function(){
     console.log("test sent");
